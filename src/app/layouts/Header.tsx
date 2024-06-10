@@ -35,7 +35,7 @@ export default function Header(): React.ReactElement {
           >
             wan<span className="text-secondary">.</span>
           </Link>
-          <button className=" text-primary-on-container text-2xl">
+          <button className="md:hidden text-primary-on-container text-2xl">
             <MdMenu onClick={toggle} />
           </button>
         </div>
