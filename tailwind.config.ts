@@ -20,6 +20,9 @@ const config: Config = {
         sans: ["var(--font-red-hat-mono)", "monospace"],
         display: ["var(--font-pacifico)", "cursive"],
       },
+      screens: {
+        "3xl": "1920px",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
