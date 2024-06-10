@@ -29,13 +29,9 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-base-100 p-4 mx-auto">
+    <main className="bg-base-100 p-4 ">
       <Hero
-        title={
-          <>
-            Hello, i&lsquo;m Jordi Irawan <br /> A Full Snack Developer
-          </>
-        }
+        title={<>Hello, i&lsquo;m Jordi Irawan a Full Snack Developer</>}
         description={
           "Currently studying at the University of Palangkaraya majoring in Informatics Engineering."
         }

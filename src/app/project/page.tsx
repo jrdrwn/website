@@ -35,12 +35,7 @@ export default function Home() {
   return (
     <main className="bg-base-100 p-4 mx-auto">
       <Hero
-        title={
-          <>
-            A collection of
-            <br /> my projects
-          </>
-        }
+        title={<>A collection of my projects</>}
         description={
           "Having spent many years in web development, I have gained extensive experience working on projects spanning various technologies."
         }

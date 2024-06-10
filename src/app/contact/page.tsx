@@ -8,11 +8,7 @@ export default function Home() {
   return (
     <main className="bg-base-100 p-4 mx-auto">
       <Hero
-        title={
-          <>
-            Let&apos;s connect with <br /> me online!
-          </>
-        }
+        title={<>Let&apos;s connect with me online!</>}
         description={
           "If you have a project to collaborate on or just want to chat, you've come to the right place."
         }
