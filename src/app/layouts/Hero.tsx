@@ -23,7 +23,7 @@ export default function Hero({
       </p>
       <div className="flex justify-between w-full absolute bottom-0 p-8  sm:p-12  md:p-14 xl:p-16 flex-col top-32 md:flex-row md:items-end md:gap-10  md:top-auto ">
         <div className="z-20">
-          <h1 className="text-primary-on-container font-bold text-3xl  sm:text-2xl md:text-3xl  lg:text-4xl xl:text-6xl 2xl:text-7xl 2xl:max-w-6xl !leading-relaxed tracking-wider ">
+          <h1 className="text-primary-on-container font-bold text-3xl  lg:text-4xl xl:text-6xl 2xl:text-7xl 2xl:max-w-6xl !leading-relaxed tracking-wider ">
             {title}
           </h1>
           <p className=" text-primary-on-container text-sm md:text-base  xl:text-xl  mt-4 max-w-screen-sm lg:max-w-screen-md !leading-loose">
