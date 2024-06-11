@@ -1,12 +1,10 @@
 export default function QuoteIcon() {
   return (
     <svg
-      width="660"
-      height="551"
       viewBox="0 0 660 551"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute top-1/2 left-32 -translate-y-1/2 "
+      className="absolute top-1/2 -translate-y-1/2 md:max-w-lg  2xl:max-w-2xl  "
     >
       <mask id="path-1-inside-1_95_60" fill="white">
         <path
