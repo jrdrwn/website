@@ -1,7 +1,7 @@
+import "@/app/globals.css";
+import ScrollToTop from "@components/utils/ScrollToTop";
 import type { Metadata } from "next";
 import { Pacifico, Red_Hat_Mono } from "next/font/google";
-import ScrollToTop from "./components/utils/ScrollToTop";
-import "./globals.css";
 
 const redHatMono = Red_Hat_Mono({
   subsets: ["latin"],

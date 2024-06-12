@@ -41,8 +41,8 @@ export default function Home() {
         }
         foregroundText={"LET ME TO SHOWCASE HERE"}
       />
-      <section className="relative min-h-[100dvh] p-32 ">
-        <div className="flex flex-col gap-8 mt-8">
+      <section className="min-h-[calc(100dvh-32px)] container pt-8 px-8 mx-auto">
+        <div className="flex flex-col gap-8 mt-14  lg:mt-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

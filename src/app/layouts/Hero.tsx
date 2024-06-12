@@ -1,6 +1,6 @@
-import Star from "../components/utils/Star";
-import TextRing from "../components/utils/TextRing";
-import Header from "./Header";
+import Star from "@components/utils/Star";
+import TextRing from "@components/utils/TextRing";
+import Header from "@layouts/Header";
 
 interface HeroProps {
   foregroundText: string | React.ReactElement;
@@ -18,10 +18,10 @@ export default function Hero({
   return (
     <section className="bg-primary-container border-secondary border-2 rounded-lg shadow-md h-[calc(100dvh-32px)]   relative container mx-auto ">
       <Header />
-      <p className="font-bold text-base-100 text-right tracking-widest !leading-tight text-[74px]  sm:text-[94px]  md:text-[114px]  lg:text-[154px]  xl:text-[194px]  2xl:text-[234px]  3xl:text-[250px] absolute right-0 top-1/2 -translate-y-1/2  uppercase ">
+      <p className="font-bold text-base-100 text-right tracking-widest !leading-tight text-[64px]  sm:text-[94px]  md:text-[114px]  lg:text-[154px]  xl:text-[194px]  2xl:text-[234px]  3xl:text-[250px] absolute left-1 bottom-32 md:right-0 md:top-1/2 md:-translate-y-1/2 md:bottom-auto  uppercase ">
         {foregroundText}
       </p>
-      <div className="flex justify-between w-full absolute bottom-0 p-8  sm:p-12  md:p-14 xl:p-16 flex-col top-32 md:flex-row md:items-end md:gap-10  md:top-auto ">
+      <div className="flex justify-between w-full absolute bottom-0 p-4  sm:p-12  md:p-14 xl:p-16 flex-col top-32 md:flex-row md:items-end md:gap-10  md:top-auto ">
         <div className="z-20">
           <h1 className="text-primary-on-container font-bold text-3xl  lg:text-4xl xl:text-6xl 2xl:text-7xl 2xl:max-w-6xl !leading-relaxed tracking-wider ">
             {title}
@@ -31,7 +31,7 @@ export default function Hero({
           </p>
           {suffix}
         </div>
-        <div className="md:scale-100 scale-50  relative w-[200px] h-[200px] mx-auto">
+        <div className="md:scale-100 scale-50  relative w-[200px] h-[200px] mx-auto md:mx-0">
           <div
             style={{
               animation: "spin 10s linear infinite",

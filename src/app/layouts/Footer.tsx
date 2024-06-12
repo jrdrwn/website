@@ -1,5 +1,5 @@
+import FooterStar from "@components/utils/FooterStar";
 import Link from "next/link";
-import FooterStar from "../components/utils/FooterStar";
 
 export default function Footer(): React.ReactElement {
   const srcs = [
@@ -41,24 +41,24 @@ export default function Footer(): React.ReactElement {
     ],
   ];
   return (
-    <section className="px-16">
-      <div className="flex justify-between mb-8">
+    <section className="px-4 container mx-auto">
+      <div className="flex justify-center md:justify-between mb-8 flex-wrap-reverse gap-8">
         <div>
-          <div className="font-display text-9xl text-base-content-100 mb-4">
+          <div className="font-display text-9xl text-base-content-100 mb-4 text-center md:text-left">
             wan<span className="text-secondary">.</span>
           </div>
-          <p className="font-light text-base-content-100 text-xl">
+          <p className="font-light text-base-content-100 text-xl text-center md:text-left">
             See you in the next project.
           </p>
         </div>
-        <div className="flex gap-10">
+        <div className="flex gap-20 flex-wrap">
           {srcs.map((src, index) => (
             <div key={index} className="gap-4 flex flex-col">
               {src.map((item, index) => (
                 <Link
                   key={index}
                   href={item.src}
-                  className="text-base-content-100 text-xl font-medium tracking-wider hover:underline "
+                  className="text-base-content-100 text-xl font-medium tracking-wider hover:underline  "
                 >
                   {item.name.toUpperCase()}
                 </Link>
@@ -68,17 +68,17 @@ export default function Footer(): React.ReactElement {
         </div>
       </div>
       <hr className="border-secondary" />
-      <footer className="mt-8 mb-4 flex justify-between items-center">
-        <span className="text-base-content-100">
+      <footer className="mt-8 mb-4 flex justify-between items-center flex-wrap-reverse gap-8 ">
+        <span className="text-base-content-100 text-center md:text-left">
           ©{" "}
           {new Date().toLocaleDateString("en-US", {
             timeZone: "Asia/Jakarta",
             year: "numeric",
           })}{" "}
-          Jordi Irawan. All rights reserved. Made with ❤️
+          Jordi Irawan. All rights reserved.
         </span>
-        <div className="flex gap-4 items-center">
-          <span className="text-base-content-100">Based in Indonesia</span>
+        <div className="flex gap-4 items-center flex-wrap justify-center ">
+          <span className="text-base-content-100 ">Based in Indonesia</span>
           <span className="text-base-content-100">|</span>
           <FooterStar />
           <span className="text-base-content-100">

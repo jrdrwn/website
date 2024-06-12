@@ -15,32 +15,32 @@ export default function Home() {
         }
         foregroundText={"I DON'T KNOW WHO I AM:V"}
       />
-      <section className="relative min-h-[100dvh] p-32 ">
-        <div className="flex justify-between items-center gap-32  ">
-          <div className="relative w-[400px] h-[400px] group cursor-pointer  ">
+      <section className="relative min-h-[100dvh] container xl:max-w-screen-lg mx-auto pt-32 flex flex-col items-center ">
+        <div className="flex justify-between  gap-4 flex-col md:items-center  md:flex-row md:gap-x-10  ">
+          <div className="relative w-40 h-40 md:w-60 md:h-60   group cursor-pointer z-50   ">
             <Image
               src="/my.jpg"
               width={425}
               height={425}
               alt="My"
-              className="transition-all group-hover:-rotate-1  max-w-[400px] max-h-[400px] rounded-xl rotate-4 object-cover filter brightness-50 absolute"
+              className="transition-all group-hover:-rotate-1 group-hover:left-0 group-hover:bottom-0  w-full h-full rounded-xl rotate-4 object-cover absolute left-6 bottom-12 md:left-3  md:bottom-0 filter brightness-50"
             />
             <Image
               src="/my.jpg"
               width={425}
               height={425}
               alt="My"
-              className="transition-all group-hover:rotate-3  max-w-[400px] max-h-[400px] rounded-xl rotate-6 object-cover filter brightness-75 absolute"
+              className="transition-all group-hover:rotate-3 group-hover:left-0 group-hover:bottom-0  w-full h-full rounded-xl rotate-6 object-cover absolute left-6 bottom-12 md:left-3  md:bottom-0  filter brightness-75"
             />
             <Image
               src="/my.jpg"
               width={425}
               height={425}
               alt="My"
-              className="transition-all group-hover:rotate-0  max-w-[400px] max-h-[400px] rounded-xl rotate-12 object-cover  absolute"
+              className="transition-all group-hover:rotate-0 group-hover:left-0 group-hover:bottom-0  w-full h-full rounded-xl rotate-12 object-cover absolute left-6 bottom-12 md:left-3  md:bottom-0 "
             />
           </div>
-          <p className="flex-1 text-base-content-100 text-3xl leading-relaxed tracking-wide text-justify  z-10 ">
+          <p className="flex-1 text-base-content-100 text-sm leading-relaxed sm:leading-loose  sm:text-base  lg:text-xl lg:leading-loose tracking-wide text-justify  z-10 ">
             I&apos;m Jordi &ldquo;Wan&rdquo; Irawan, a student at University of
             Palangkaraya majoring in Informatics Engineering. I am passionate
             about technology, particularly in web development, mobile, cloud &
@@ -50,7 +50,7 @@ export default function Home() {
           </p>
         </div>
         <div className="relative z-10">
-          <p className="text-base-content-100 text-3xl leading-relaxed tracking-wide text-justify mt-24 z-20">
+          <p className="text-base-content-100 text-sm leading-relaxed sm:leading-loose  sm:text-base  lg:text-xl lg:leading-loose tracking-wide text-justify mt-8 z-20">
             Wan stands out due to his swift adaptability to new challenges,
             positioning him as a promising front-end developer. Despite having
             limited experience, he is diligent in seeking out resources and
@@ -60,7 +60,7 @@ export default function Home() {
             just begun, Wan is on the path to becoming a proficient professional
             skilled in various web frameworks.
           </p>
-          <p className="text-base-content-100 text-3xl leading-relaxed tracking-wide text-justify mt-16 z-50">
+          <p className="text-base-content-100 text-sm leading-relaxed sm:leading-loose  sm:text-base  lg:text-xl lg:leading-loose tracking-wide text-justify mt-8 z-50">
             I stay abreast of industry trends and best practices to deliver
             innovative solutions that exceed company expectations. My strong
             problem-solving abilities and attention to detail drive innovation
@@ -68,12 +68,11 @@ export default function Home() {
           </p>
         </div>
         <svg
-          width="586"
           height="970"
           viewBox="0 0 586 970"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute right-32 top-1/2 -translate-y-1/2  z-auto "
+          className="absolute top-1/2 -translate-y-1/2  z-auto w-full max-w-96 "
         >
           <path
             d="M26.064 272.731H26.0551L26.0462 272.731C22.6905 272.791 19.3581 272.163 16.2538 270.887C13.1495 269.611 10.339 267.714 7.99517 265.311C5.6513 262.909 3.82359 260.052 2.62441 256.917C1.42603 253.784 0.880662 250.439 1.0218 247.088C6.13898 155.755 46.0444 94.2815 101.678 55.6105C157.353 16.9109 228.855 1 297.172 1C372.489 1 444.468 20.6826 497.591 60.6541C550.683 100.601 585 160.851 585 242.176C585 358.257 516.769 413.538 450.976 463.563C411.202 493.734 383.784 514.574 366.353 537.605C348.857 560.722 341.446 585.999 341.446 624.945V636.292C341.446 643.192 338.705 649.81 333.827 654.689C328.948 659.568 322.332 662.309 315.433 662.309H227.801C220.973 662.31 214.419 659.626 209.552 654.837C204.685 650.047 201.896 643.536 201.787 636.709L201.463 613.26L201.463 613.247L201.462 613.233C197.377 513.569 254.621 452.14 327.258 399.356L327.265 399.352L327.271 399.347C359.175 375.376 385.354 355.416 403.533 332.835C421.757 310.199 431.942 284.935 431.942 250.389C431.942 205.527 414.854 173.671 388.362 153.056C361.906 132.47 326.171 123.168 288.959 123.168C245.424 123.168 211.352 136.148 186.936 158.114C162.525 180.075 147.849 210.943 142.96 246.579L142.959 246.584C141.069 260.978 129.536 272.731 115.209 272.731H26.064ZM277.398 969C214.659 969 169.263 926.794 169.263 869.823C169.263 810.794 214.665 769.241 277.29 769.241C309.979 769.241 337.524 779.653 356.885 797.399C376.239 815.14 387.477 840.263 387.477 869.823C387.477 926.786 342.738 969 277.398 969Z"
@@ -81,11 +80,11 @@ export default function Home() {
             strokeWidth="2"
           />
         </svg>
-        <div className="flex justify-center gap-20 mt-14">
+        <div className="flex justify-around gap-x-4 md:gap-x-8 lg:gap-x-12 mt-10 flex-wrap">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="175"
-            height="175"
+            width="125"
+            height="125"
             viewBox="0 0 129 129"
             fill="none"
           >
@@ -108,8 +107,8 @@ export default function Home() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="175"
-            height="175"
+            width="125"
+            height="125"
             viewBox="0 0 129 129"
             fill="none"
           >
@@ -132,8 +131,8 @@ export default function Home() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="175"
-            height="175"
+            width="125"
+            height="125"
             viewBox="0 0 129 129"
             fill="none"
           >
@@ -160,8 +159,8 @@ export default function Home() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="175"
-            height="175"
+            width="125"
+            height="125"
             viewBox="0 0 129 129"
             fill="none"
           >
@@ -184,8 +183,8 @@ export default function Home() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="175"
-            height="175"
+            width="125"
+            height="125"
             viewBox="0 0 129 129"
             fill="none"
           >

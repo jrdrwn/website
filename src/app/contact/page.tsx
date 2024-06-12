@@ -1,8 +1,8 @@
 "use client";
 
+import MyButton from "@components/button/MyButton";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
-import MyButton from "../components/button/MyButton";
 
 export default function Home() {
   return (

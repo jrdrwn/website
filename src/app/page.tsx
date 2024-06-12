@@ -1,12 +1,12 @@
 "use client";
 
+import MyButton from "@components/button/MyButton";
+import { ProjectCard, ProjectCardProps } from "@components/card/ProjectCard";
+import QuoteIcon from "@components/utils/QuoteIcon";
+import Closing from "@layouts/Closing";
+import Footer from "@layouts/Footer";
+import Hero from "@layouts/Hero";
 import Link from "next/link";
-import MyButton from "./components/button/MyButton";
-import { ProjectCard, ProjectCardProps } from "./components/card/ProjectCard";
-import QuoteIcon from "./components/utils/QuoteIcon";
-import Closing from "./layouts/Closing";
-import Footer from "./layouts/Footer";
-import Hero from "./layouts/Hero";
 
 export default function Home() {
   const projects: ProjectCardProps[] = [
@@ -38,18 +38,18 @@ export default function Home() {
         foregroundText={"KEEP SIMPLE BE HUMBLE"}
         suffix={<MyButton className="mt-10">Curriculum Vitae</MyButton>}
       />
-      <section className="relative min-h-[100dvh]">
+      <section className="relative min-h-[100dvh] container mx-auto p-8 ">
         <QuoteIcon />
-        <p className="font-bold  text-white absolute right-32 top-1/2 -translate-y-1/2  text-7xl text-justify tracking-wide leading-relaxed max-w-screen-lg">
+        <p className="font-bold  text-base-content-100 absolute  right-2 md:right-8 sm:left-auto top-1/2 -translate-y-1/2 text-3xl  lg:text-4xl xl:text-6xl 2xl:text-7xl  text-justify tracking-wide !leading-relaxed max-w-md md:max-w-lg  lg:max-w-screen-sm xl:max-w-screen-lg">
           Indeed, Allah does not change the condition of a people until they
           change what is in themselves
         </p>
       </section>
-      <section className="min-h-[calc(100dvh-32px)] px-32">
-        <h1 className="text-base-content-100 text-5xl before:absolute relative before:-z-10 before:w-16  before:-left-3  before:h-16 before:-translate-y-2 before:inset-y-0 z-50 before:border before:border-secondary before:bg-primary-container before:rounded-md">
+      <section className="min-h-[calc(100dvh-32px)] container  px-8 mx-auto">
+        <h1 className="text-base-content-100 text-3xl  md:text-4xl  xl:text-5xl before:absolute relative before:-z-10 before:w-12 before:h-12 before:-left-2 before:-translate-y-1   md:before:w-14 md:before:h-14 md:before:-left-4    xl:before:w-16  xl:before:-left-3  xl:before:h-16 md:before:-translate-y-2 before:inset-y-0 z-50 before:border before:border-secondary before:bg-primary-container before:rounded-md">
           SELECTED PROJECT
         </h1>
-        <div className="flex flex-col gap-8 mt-8">
+        <div className="flex flex-col gap-8 mt-14  lg:mt-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

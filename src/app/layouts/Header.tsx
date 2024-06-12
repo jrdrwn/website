@@ -1,7 +1,7 @@
+import { NavBtn } from "@components/button/NavBtn";
 import Link from "next/link";
 import React from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import { NavBtn } from "../components/button/NavBtn";
 
 export default function Header(): React.ReactElement {
   const srcs = [
@@ -27,7 +27,7 @@ export default function Header(): React.ReactElement {
 
   return (
     <>
-      <header className="text-primary-on-container items-center flex gap-12 absolute left-8 right-8  sm:left-12  md:left-14 xl:left-16 top-8  md:top-12 z-30">
+      <header className="text-primary-on-container items-center flex gap-12 absolute left-4 right-4  sm:left-12  md:left-14 xl:left-16 top-8  md:top-12 z-30">
         <div className="flex justify-between items-center w-full md:w-auto">
           <Link
             href={"/"}
@@ -52,7 +52,7 @@ export default function Header(): React.ReactElement {
           !isOpen ? "-top-full translate-y-full" : "top-0"
         }`}
       >
-        <div className="flex justify-between items-center h-16 px-12 pt-16 ">
+        <div className="flex justify-between items-center h-16 px-8 pt-16 ">
           <Link href={"/"} className="font-display text-xl">
             wan<span className="text-secondary">.</span>
           </Link>
