@@ -47,7 +47,7 @@ export default function Home() {
           change what is in themselves
         </p>
       </section>
-      <section className="min-h-[calc(100dvh-32px)] container  px-8 mx-auto">
+      <section className="min-h-[calc(100dvh-32px)] container  md:px-8 mx-auto">
         <h1 className="text-base-content-100 text-3xl  md:text-4xl  xl:text-5xl before:absolute relative before:-z-10 before:w-12 before:h-12 before:-left-2 before:-translate-y-1   md:before:w-14 md:before:h-14 md:before:-left-4    xl:before:w-16  xl:before:-left-3  xl:before:h-16 md:before:-translate-y-2 before:inset-y-0 z-50 before:border before:border-secondary before:bg-primary-container before:rounded-md">
           SELECTED PROJECT
         </h1>

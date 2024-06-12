@@ -37,7 +37,7 @@ export default function Footer(): React.ReactElement {
     ],
   ];
   return (
-    <section className="px-4 container mx-auto">
+    <section className="md:px-4 container mx-auto">
       <div className="flex justify-center md:justify-between mb-8 flex-wrap-reverse gap-8">
         <div>
           <div className="font-display text-9xl text-base-content-100 mb-4 text-center md:text-left">
