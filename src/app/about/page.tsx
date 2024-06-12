@@ -19,21 +19,21 @@ export default function Home() {
         <div className="flex justify-between  gap-4 flex-col md:items-center  md:flex-row md:gap-x-10  ">
           <div className="relative w-40 h-40 md:w-60 md:h-60   group cursor-pointer z-50   ">
             <Image
-              src="/my.jpg"
+              src="/images/my.jpg"
               width={425}
               height={425}
               alt="My"
               className="transition-all group-hover:-rotate-1 group-hover:left-0 group-hover:bottom-0  w-full h-full rounded-xl rotate-4 object-cover absolute left-6 bottom-12 md:left-3  md:bottom-0 filter brightness-50"
             />
             <Image
-              src="/my.jpg"
+              src="/images/my.jpg"
               width={425}
               height={425}
               alt="My"
               className="transition-all group-hover:rotate-3 group-hover:left-0 group-hover:bottom-0  w-full h-full rounded-xl rotate-6 object-cover absolute left-6 bottom-12 md:left-3  md:bottom-0  filter brightness-75"
             />
             <Image
-              src="/my.jpg"
+              src="/images/my.jpg"
               width={425}
               height={425}
               alt="My"

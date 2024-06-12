@@ -7,7 +7,7 @@ export interface ProjectCardProps {
   description: string;
   image: string;
   url: string;
-  number: number;
+  number?: number;
 }
 export function ProjectCard(props: ProjectCardProps) {
   return (

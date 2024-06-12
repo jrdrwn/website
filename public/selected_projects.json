@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Pendaftaran SMA",
+    "description": "A website created for a final practicum assignment",
+    "image": "/images/pendaftaran-sma.png",
+    "url": "https://github.com/jrdrwn/pendaftaran-sma"
+  },
+  {
+    "title": "Pakar Mobile",
+    "description": "An android application created for the implementation of PAKAR API",
+    "image": "/images/pakar-mobile.png",
+    "url": "https://github.com/jrdrwn/pakar-mobile/releases/download/pakar-v0.1.0/pakar-mobile.apk"
+  },
+  {
+    "title": "Pakar Website",
+    "description": "A website that carries a sustainability theme so that all courses can be handled by this website",
+    "image": "/images/pakar.png",
+    "url": "https://pakar.vercel.app/"
+  },
+  {
+    "title": "LDK JS Website",
+    "description": "A website created for the LDK JS organization based in Universitas Palangka Raya",
+    "image": "/images/ldkjsupr.png",
+    "url": "https://ldkjs.netlify.app/"
+  }
+]

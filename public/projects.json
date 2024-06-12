@@ -1,0 +1,62 @@
+[
+  {
+    "title": "My Website",
+    "description": "My personal website that I created using Next.js",
+    "image": "/images/v3-personal-website.png",
+    "url": "https://wannn.space/"
+  },
+  {
+    "title": "Pakar Mobile",
+    "description": "An android application created for the implementation of PAKAR API",
+    "image": "/images/pakar-mobile.png",
+    "url": "https://github.com/jrdrwn/pakar-mobile/releases/download/pakar-v0.1.0/pakar-mobile.apk"
+  },
+  {
+    "title": "Pakar Website",
+    "description": "A website that carries a sustainability theme so that all courses can be handled by this website",
+    "image": "/images/pakar.png",
+    "url": "https://pakar.vercel.app/"
+  },
+  {
+    "title": "Pendaftaran SMA",
+    "description": "A website created for a final practicum assignment",
+    "image": "/images/pendaftaran-sma.png",
+    "url": "https://github.com/jrdrwn/pendaftaran-sma"
+  },
+  {
+    "title": "Adanest",
+    "description": "A website created as a project for the Gemastik 2023 competition for PMO addicts",
+    "image": "/images/adanest.png",
+    "url": "https://github.com/adanestapp/adanest-web"
+  },
+  {
+    "title": "LDK JS Website",
+    "description": "A website created for the LDK JS organization based in Universitas Palangka Raya",
+    "image": "/images/ldkjsupr.png",
+    "url": "https://ldkjs.netlify.app/"
+  },
+  {
+    "title": "Traffic Light Cycle Time Generator",
+    "description": "A tool for displaying traffic light setting recommendations based on the number of vehicles passing through an intersection",
+    "image": "/images/traffic-light-cycle-time-generator.png",
+    "url": "https://github.com/jrdrwn/traffic-light-cycle-time-generator"
+  },
+  {
+    "title": "StackArrayTUI",
+    "description": "A simple stack array implementation using the TUI interface based on the C++ programming language",
+    "image": "/images/stackarraytui.png",
+    "url": "https://github.com/jrdrwn/StackArrayTUI"
+  },
+  {
+    "title": "Portfolio Website v2",
+    "description": "My old portfolio website that I created using the React Vite",
+    "image": "/images/v2-personal-website.png",
+    "url": "https://jordiirawan.netlify.app/"
+  },
+  {
+    "title": "Portfolio Website v1",
+    "description": "My old portfolio website that I created using HTML, CSS, and JavaScript",
+    "image": "/images/v1-personal-website.png",
+    "url": "https://v1-wannn.netlify.app/"
+  }
+]

@@ -31,12 +31,8 @@ export default function Footer(): React.ReactElement {
         src: "https://github.com/jrdrwn",
       },
       {
-        name: "linkedin",
-        src: "#",
-      },
-      {
         name: "read.cv",
-        src: "#",
+        src: "https://drive.google.com/uc?export=download&id=1NOaX97NXQ4fPI3NpPawNdPW_Ip-LVS2p",
       },
     ],
   ];
@@ -47,7 +43,7 @@ export default function Footer(): React.ReactElement {
           <div className="font-display text-9xl text-base-content-100 mb-4 text-center md:text-left">
             wan<span className="text-secondary">.</span>
           </div>
-          <p className="font-light text-base-content-100 text-xl text-center md:text-left">
+          <p className="font-light text-base-content-100 text-base md:text-xl text-center md:text-left">
             See you in the next project.
           </p>
         </div>
@@ -58,7 +54,7 @@ export default function Footer(): React.ReactElement {
                 <Link
                   key={index}
                   href={item.src}
-                  className="text-base-content-100 text-xl font-medium tracking-wider hover:underline  "
+                  className="text-base-content-100 text-base  md:text-xl font-medium tracking-wider hover:underline  "
                 >
                   {item.name.toUpperCase()}
                 </Link>
@@ -68,7 +64,7 @@ export default function Footer(): React.ReactElement {
         </div>
       </div>
       <hr className="border-secondary" />
-      <footer className="mt-8 mb-4 flex justify-between items-center flex-wrap-reverse gap-8 ">
+      <footer className="mt-8 mb-4 flex items-center gap-8  text-sm justify-center flex-col md:text-base md:flex-row  flex-wrap-reverse md:justify-between ">
         <span className="text-base-content-100 text-center md:text-left">
           ©{" "}
           {new Date().toLocaleDateString("en-US", {

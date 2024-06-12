@@ -7,26 +7,20 @@ import Closing from "@layouts/Closing";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const projects: ProjectCardProps[] = [
-    {
-      title: "Pakar Mobile",
-      description:
-        "An android application created for the implementation of PAKAR API",
-      image: "/image.png",
-      url: "/pakar-mobile",
-      number: 1,
-    },
-    {
-      title: "Pakar Website",
-      description:
-        "A website that carries a sustainability theme so that all courses can be handled by this website",
-      image: "/image.png",
-      url: "/pakar-website",
-      number: 2,
-    },
-  ];
+  const [projects, setProjects] = useState<ProjectCardProps[]>([]);
+
+  const fetchProjects = async () => {
+    const response = await fetch("/selected_projects.json");
+    const data = await response.json();
+    setProjects(data);
+  };
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
 
   return (
     <main className="bg-base-100 p-4 ">
@@ -36,7 +30,15 @@ export default function Home() {
           "Currently studying at the University of Palangkaraya majoring in Informatics Engineering."
         }
         foregroundText={"KEEP SIMPLE BE HUMBLE"}
-        suffix={<MyButton className="mt-10">Curriculum Vitae</MyButton>}
+        suffix={
+          <Link
+            href={
+              "https://drive.google.com/uc?export=download&id=1NOaX97NXQ4fPI3NpPawNdPW_Ip-LVS2p"
+            }
+          >
+            <MyButton className="mt-10">Curriculum Vitae</MyButton>
+          </Link>
+        }
       />
       <section className="relative min-h-[100dvh] container mx-auto p-8 ">
         <QuoteIcon />
@@ -57,7 +59,7 @@ export default function Home() {
               description={project.description}
               image={project.image}
               url={project.url}
-              number={project.number}
+              number={index + 1}
             />
           ))}
         </div>
