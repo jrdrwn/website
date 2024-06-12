@@ -5,6 +5,25 @@ import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
 
 export default function Home() {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      alert("Error when submiting the form");
+    } else {
+      alert("Success submiting the form");
+      location.reload();
+    }
+  };
   return (
     <main className="bg-base-100 p-4 mx-auto">
       <Hero
@@ -15,7 +34,11 @@ export default function Home() {
         foregroundText={"Don't be shy to CONNECT"}
       />
       <section className="relative min-h-[100dvh] container mx-auto py-32  md:max-w-screen-lg">
-        <form action="" className="flex flex-col gap-12">
+        <form
+          action=""
+          className="flex flex-col gap-12"
+          onSubmit={handleSubmit}
+        >
           <TextInputForm name="name" label="name" placeholder="Your name" />
           <TextInputForm
             name="email"
@@ -67,6 +90,7 @@ function TextInputForm(props: TextInputProps): React.ReactElement {
         name={props.name}
         placeholder={props.placeholder}
         className="rounded-lg bg-primary-container border-2 border-secondary py-4 focus:ring-0 focus:border-primary-on-container text-primary-on-container placeholder:text-secondary"
+        required={true}
       />
     </div>
   );
@@ -92,6 +116,7 @@ function TextAreaForm(props: TextAreaProps): React.ReactElement {
         name={props.name}
         placeholder={props.placeholder}
         className="rounded-lg bg-primary-container border-2 border-secondary py-4 focus:ring-0 focus:border-primary-on-container text-primary-on-container placeholder:text-secondary"
+        required={true}
       />
     </div>
   );
@@ -110,6 +135,7 @@ function CheckboxForm(props: CheckboxProps): React.ReactElement {
         id={props.name}
         name={props.name}
         className="form-checkbox rounded-md bg-primary-container border-2 border-secondary p-3 focus:ring-0 focus:border-primary-on-container text-xs"
+        required={true}
       />
       <label
         htmlFor={props.name}
