@@ -13,6 +13,7 @@ export async function POST(request: NextRequest) {
     });
     return NextResponse.json({ message: "Berhasil menyimpan data" });
   } catch (error) {
+    console.error(error);
     return NextResponse.json(
       { message: "Kesalahan dalam menyimpan data" },
       {
