@@ -17,7 +17,7 @@ const pacifico = Pacifico({
 export const metadata: Metadata = {
   title: "Wan's Portfolio",
   description:
-    "I'm a fullsnack developer who loves to build web applications and solve problems.",
+    "I'm a Fullsnack Developer who loves to build web applications and solve problems.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://wannn.space/",
     images: [
       {
-        url: "https://drive.google.com/uc?export=download&id=14nwTwPPCT1n8WTDd-6RIAxYMptfuDUsy",
+        url: "https://ik.imagekit.io/jxhehdgsg/personal-website/v3-personal-website.png",
         width: 1200,
         height: 630,
         alt: "Wan's Portfolio",
