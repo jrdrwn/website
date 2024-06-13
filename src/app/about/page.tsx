@@ -3,11 +3,12 @@
 import Closing from "@layouts/Closing";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
+import Wrapper from "@layouts/Wrapper";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-base-100 p-4 mx-auto">
+    <Wrapper>
       <Hero
         title={<>Let&lsquo;s get to know each other</>}
         description={
@@ -209,6 +210,6 @@ export default function Home() {
       </section>
       <Closing title="See you in the next project." action="Get in touch" />
       <Footer />
-    </main>
+    </Wrapper>
   );
 }

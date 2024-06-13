@@ -3,6 +3,7 @@
 import MyButton from "@components/button/MyButton";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
+import Wrapper from "@layouts/Wrapper";
 
 export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +26,7 @@ export default function Home() {
     }
   };
   return (
-    <main className="bg-base-100 p-4 mx-auto">
+    <Wrapper>
       <Hero
         title={<>Let&apos;s connect with me online!</>}
         description={
@@ -64,7 +65,7 @@ export default function Home() {
         </form>
       </section>
       <Footer />
-    </main>
+    </Wrapper>
   );
 }
 
