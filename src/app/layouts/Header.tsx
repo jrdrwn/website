@@ -1,3 +1,5 @@
+"use client";
+
 import { NavBtn } from "@components/button/NavBtn";
 import Link from "next/link";
 import React from "react";
