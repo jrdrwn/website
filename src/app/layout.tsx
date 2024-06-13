@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   title: "Wan's Portfolio",
   description:
     "I'm a fullsnack developer who loves to build web applications and solve problems.",
+  openGraph: {
+    images: [
+      {
+        url: "https://drive.google.com/uc?export=download&id=14nwTwPPCT1n8WTDd-6RIAxYMptfuDUsy",
+        width: 1200,
+        height: 630,
+        alt: "Wan's Portfolio",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
