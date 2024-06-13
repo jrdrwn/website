@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   description:
     "I'm a fullsnack developer who loves to build web applications and solve problems.",
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    title: "Wan's Portfolio",
+    description:
+      "I'm a fullsnack developer who loves to build web applications and solve problems.",
+    siteName: "Wan's Portfolio",
+    url: "https://wannn.space/",
     images: [
       {
         url: "https://drive.google.com/uc?export=download&id=14nwTwPPCT1n8WTDd-6RIAxYMptfuDUsy",
