@@ -4,8 +4,24 @@ import MyButton from "@components/button/MyButton";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
 import Wrapper from "@layouts/Wrapper";
+import { useRef, useState } from "react";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalHeader,
+} from "../components/utils/Modal";
 
 export default function Home() {
+  const [modal, setModal] = useState({
+    title: "",
+    message: "",
+    onClose: () => {},
+  });
+  const [isOpen, setIsOpen] = useState(false);
+
+  const formRef = useRef<HTMLFormElement>(null);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -19,14 +35,32 @@ export default function Home() {
     });
 
     if (!response.ok) {
-      alert("Error when submiting the form");
+      setModal({
+        title: "Error",
+        message: "Failed to submit the form. Please try again later.",
+        onClose: () => setIsOpen(false),
+      });
     } else {
-      alert("Success submiting the form");
-      location.reload();
+      setModal({
+        title: "Success",
+        message: "Your message has been sent successfully.",
+        onClose: () => setIsOpen(false),
+      });
+      formRef.current?.reset();
     }
+    setIsOpen(true);
   };
+
   return (
     <Wrapper>
+      <Modal isOpen={isOpen}>
+        <ModalContent>
+          <ModalHeader title={modal.title} onClose={modal.onClose} />
+          <ModalBody>
+            <p className="text-base-content-100">{modal.message}</p>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
       <Hero
         title={<>Let&apos;s connect with me online!</>}
         description={
@@ -36,7 +70,7 @@ export default function Home() {
       />
       <section className="relative min-h-[100dvh] container mx-auto py-32  md:max-w-screen-lg">
         <form
-          action=""
+          ref={formRef}
           className="flex flex-col gap-12"
           onSubmit={handleSubmit}
         >
