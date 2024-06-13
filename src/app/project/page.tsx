@@ -1,25 +1,17 @@
-"use client";
-
-import { ProjectCard, ProjectCardProps } from "@components/card/ProjectCard";
+import { ProjectCardWrapper } from "@components/card/ProjectCard";
 import Closing from "@layouts/Closing";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
 import Wrapper from "@layouts/Wrapper";
-import { useEffect, useState } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects Wan",
+  description:
+    "Having spent many years in web development, I have gained extensive experience working on projects spanning various technologies.",
+};
 
 export default function Home() {
-  const [projects, setProjects] = useState<ProjectCardProps[]>([]);
-
-  const fetchProjects = async () => {
-    const response = await fetch("/projects.json");
-    const data = await response.json();
-    setProjects(data);
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-
   return (
     <Wrapper>
       <Hero
@@ -31,16 +23,7 @@ export default function Home() {
       />
       <section className="min-h-[calc(100dvh-32px)] container pt-8 md:px-8 mx-auto">
         <div className="flex flex-col gap-8 mt-14  lg:mt-8">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              url={project.url}
-              number={index + 1}
-            />
-          ))}
+          <ProjectCardWrapper url="/projects.json" />
         </div>
       </section>
       <Closing title="Need help completing a project?" action="Get in touch" />

@@ -1,10 +1,15 @@
-"use client";
-
 import Closing from "@layouts/Closing";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
 import Wrapper from "@layouts/Wrapper";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About Wan",
+  description:
+    "Let me introduce myself, my workflows, my collaborations, and the technologies I like to use to bring my projects to life.",
+};
 
 export default function Home() {
   return (

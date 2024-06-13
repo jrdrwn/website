@@ -1,28 +1,15 @@
 "use client";
 
 import MyButton from "@components/button/MyButton";
-import { ProjectCard, ProjectCardProps } from "@components/card/ProjectCard";
+import { ProjectCardWrapper } from "@components/card/ProjectCard";
 import QuoteIcon from "@components/utils/QuoteIcon";
 import Closing from "@layouts/Closing";
 import Footer from "@layouts/Footer";
 import Hero from "@layouts/Hero";
 import Wrapper from "@layouts/Wrapper";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [projects, setProjects] = useState<ProjectCardProps[]>([]);
-
-  const fetchProjects = async () => {
-    const response = await fetch("/selected_projects.json");
-    const data = await response.json();
-    setProjects(data);
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-
   return (
     <Wrapper>
       <Hero
@@ -53,16 +40,7 @@ export default function Home() {
           SELECTED PROJECT
         </h1>
         <div className="flex flex-col gap-8 mt-14  lg:mt-8">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              url={project.url}
-              number={index + 1}
-            />
-          ))}
+          <ProjectCardWrapper url="/selected_projects.json" />
         </div>
         <Link href="/project">
           <MyButton className="mt-10">View All Project</MyButton>

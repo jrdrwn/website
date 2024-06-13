@@ -1,6 +1,36 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+export function ProjectCardWrapper(props: { url: string }) {
+  const [projects, setProjects] = useState<ProjectCardProps[]>([]);
+
+  const fetchProjects = async () => {
+    const response = await fetch(props.url);
+    const data = await response.json();
+    setProjects(data);
+  };
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  return (
+    <>
+      {projects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          title={project.title}
+          description={project.description}
+          image={project.image}
+          url={project.url}
+          number={index + 1}
+        />
+      ))}
+    </>
+  );
+}
 
 export interface ProjectCardProps {
   title: string;
