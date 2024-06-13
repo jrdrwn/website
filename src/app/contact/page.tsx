@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "If you have a project to collaborate on or just want to chat, you've come to the right place.",
 };
-export default function Home() {
+export default function Contact() {
   return (
     <Wrapper>
       <Hero

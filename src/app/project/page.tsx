@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Having spent many years in web development, I have gained extensive experience working on projects spanning various technologies.",
 };
 
-export default function Home() {
+export default function Project() {
   return (
     <Wrapper>
       <Hero

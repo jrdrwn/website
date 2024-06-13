@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Let me introduce myself, my workflows, my collaborations, and the technologies I like to use to bring my projects to life.",
 };
 
-export default function Home() {
+export default function About() {
   return (
     <Wrapper>
       <Hero
