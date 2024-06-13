@@ -126,6 +126,7 @@ function TextInputForm(props: TextInputProps): React.ReactElement {
         placeholder={props.placeholder}
         className="rounded-lg bg-primary-container border-2 border-secondary py-4 focus:ring-0 focus:border-primary-on-container text-primary-on-container placeholder:text-secondary"
         required={true}
+        autoComplete="off"
       />
     </div>
   );
@@ -152,6 +153,7 @@ function TextAreaForm(props: TextAreaProps): React.ReactElement {
         placeholder={props.placeholder}
         className="rounded-lg bg-primary-container border-2 border-secondary py-4 focus:ring-0 focus:border-primary-on-container text-primary-on-container placeholder:text-secondary"
         required={true}
+        autoComplete="off"
       />
     </div>
   );
