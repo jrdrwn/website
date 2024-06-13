@@ -13,7 +13,7 @@ export default function MyButton({
       onClick={onClick}
     >
       <span className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-transparent border-primary-on-container border-2 rounded-md  transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></span>
-      <span className="relative block rounded-md font-medium  bg-primary-on-container group-active:bg-white  px-8 py-3">
+      <span className="relative flex items-center justify-center rounded-md font-medium  bg-primary-on-container group-active:bg-white  px-8 py-3 ">
         {children}
       </span>
     </button>
