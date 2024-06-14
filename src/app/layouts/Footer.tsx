@@ -1,6 +1,8 @@
-import FooterStar from "@components/utils/FooterStar";
-import Link from "next/link";
+"use client";
 
+import FooterStar from "@components/utils/FooterStar";
+import { motion } from "framer-motion";
+import Link from "next/link";
 export default function Footer(): React.ReactElement {
   const srcs = [
     [
@@ -37,7 +39,13 @@ export default function Footer(): React.ReactElement {
     ],
   ];
   return (
-    <section className="md:px-4 container mx-auto">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ amount: "some" }}
+      className="md:px-4 container mx-auto relative bg-inherit"
+    >
       <div className="flex justify-center md:justify-between mb-8 flex-wrap-reverse gap-8">
         <div>
           <div className="font-display text-9xl text-base-content-100 mb-4 text-center md:text-left">
@@ -77,7 +85,7 @@ export default function Footer(): React.ReactElement {
           <span className="text-base-content-100 ">Based in Indonesia</span>
           <span className="text-base-content-100">|</span>
           <FooterStar />
-          <span className="text-base-content-100">
+          <span className="text-base-content-100" suppressHydrationWarning>
             {new Date().toLocaleTimeString("en-US", {
               timeStyle: "short",
               hour12: false,
@@ -92,6 +100,6 @@ export default function Footer(): React.ReactElement {
           </span>
         </div>
       </footer>
-    </section>
+    </motion.section>
   );
 }

@@ -15,6 +15,12 @@ const pacifico = Pacifico({
 });
 
 export const metadata: Metadata = {
+  icons: [
+    {
+      url: "/favicon.svg",
+      sizes: "any",
+    },
+  ],
   title: "Wan's Portfolio",
   description:
     "I'm a Fullsnack Developer who loves to build web applications and solve problems.",

@@ -50,8 +50,11 @@ export default function Header(): React.ReactElement {
         </nav>
       </header>
       <nav
+        style={{
+          transitionDuration: "0.5s",
+        }}
         className={`transition-all fixed  right-0 left-0 bottom-0 bg-primary-container/95 z-[999] text-primary-on-container ${
-          !isOpen ? "-top-full translate-y-full" : "top-0"
+          !isOpen ? "-top-full translate-y-full opacity-0" : "top-0"
         }`}
       >
         <div className="flex justify-between items-center h-16 px-8 pt-16 ">

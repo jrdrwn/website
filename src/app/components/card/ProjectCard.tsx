@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -42,7 +43,18 @@ export interface ProjectCardProps {
 export function ProjectCard(props: ProjectCardProps) {
   return (
     <>
-      <div className="flex justify-between items-center group/project cursor-pointer flex-col sm:flex-row gap-4 w-full">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 25,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{ duration: 0.5 }}
+        className="flex justify-between items-center group/project cursor-pointer flex-col sm:flex-row gap-4 w-full"
+      >
         <div className="lg:hidden">
           <Image
             src={props.image}
@@ -104,8 +116,19 @@ export function ProjectCard(props: ProjectCardProps) {
             </svg>
           </Link>
         </div>
-      </div>
-      <hr className="border-secondary" />
+      </motion.div>
+      <motion.hr
+        initial={{
+          width: 0,
+          opacity: 0,
+        }}
+        whileInView={{
+          width: "100%",
+          opacity: 1,
+        }}
+        transition={{ duration: 0.5 }}
+        className="border-secondary mx-auto"
+      />
     </>
   );
 }

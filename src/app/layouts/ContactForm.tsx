@@ -7,8 +7,8 @@ import {
   ModalContent,
   ModalHeader,
 } from "@components/utils/Modal";
+import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [modal, setModal] = useState({
@@ -60,7 +60,11 @@ export default function ContactForm() {
         </ModalContent>
       </Modal>
       <section className="relative min-h-[100dvh] container mx-auto py-32  md:max-w-screen-lg">
-        <form
+        <motion.form
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ amount: "some" }}
           ref={formRef}
           className="flex flex-col gap-12"
           onSubmit={handleSubmit}
@@ -111,7 +115,7 @@ export default function ContactForm() {
               Submit
             </MyButton>
           </div>
-        </form>
+        </motion.form>
       </section>
     </>
   );
