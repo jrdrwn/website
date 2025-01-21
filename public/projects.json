@@ -6,6 +6,18 @@
     "url": "https://wannn.space/"
   },
   {
+    "title": "Hayak.AI: Fast-Response Danger Alert Application",
+    "description": "A mobile application that I created for the Bangkit 2024 Capstone Project",
+    "image": "/images/hayak-ai.png",
+    "url": "https://github.com/Hayak-AI"
+  },
+  {
+    "title": "MochieByte",
+    "description": "A website that I created for my friend's online shop",
+    "image": "/images/mochiebyte.png",
+    "url": "https://mochiebyte-website.vercel.app/"
+  },
+  {
     "title": "Pakar Mobile",
     "description": "An android application created for the implementation of PAKAR API",
     "image": "/images/pakar-mobile.png",
