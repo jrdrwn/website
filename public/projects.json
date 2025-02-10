@@ -6,6 +6,12 @@
     "url": "https://wannn.space/"
   },
   {
+    "title": "EduTech",
+    "description": "A website for conducting internship interview tests",
+    "image": "/images/edutech.png",
+    "url": "https://edutech-jordiirawan.vercel.app/"
+  },
+  {
     "title": "Hayak.AI: Fast-Response Danger Alert Application",
     "description": "A mobile application that I created for the Bangkit 2024 Capstone Project",
     "image": "/images/hayak-ai.png",
