@@ -33,6 +33,10 @@ export default function Footer(): React.ReactElement {
         src: "https://github.com/jrdrwn",
       },
       {
+        name: "linkedin",
+        src: "https://www.linkedin.com/in/jordi-irawan-74b141327/",
+      },
+      {
         name: "read.cv",
         src: "https://drive.google.com/uc?export=download&id=1NOaX97NXQ4fPI3NpPawNdPW_Ip-LVS2p",
       },
