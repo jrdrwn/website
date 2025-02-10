@@ -85,7 +85,7 @@ export default function ContactForm() {
             <CheckboxForm
               name="accept"
               label="I aggre with the terms of the Privacy Policy"
-              className="mt-4"
+              className="mt-4 flex"
             />
           </div>
           <div>
